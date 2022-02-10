@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>TMM SCTSNet</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110862391-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Jointly Learning the Attributes and Composition of Shots for Boundary Detection in Videos
+                <!-- <small>
+                    CVPR 2022
+                </small> -->
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div style="margin-bottom: 0.7em; margin-top:0.2em" class="authors">
+                    <a style="color:#000000;" href="">Xuekun Jiang<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:#000000;" href="https://eveneveno.github.io/lnxu/">Libiao Jin<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:#000000;" href="https://xingangpan.github.io/">Anyi Rao<sup>*2</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:#000000;" href="http://nxzhao.com/">Linning Xu<sup>2</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:#000000;" href="http://dahua.me/">Dahua Lin<sup>2</sup></a>
+                </div>
+
+                <div style="margin-bottom: 0.5em;" class="affiliations">
+                    <a href="http://www.cuc.edu.cn/">SKLMCC, Communication University of China<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<a href="http://mmlab.ie.cuhk.edu.hk/">MMLab, The Chinese University of Hong Kong<sup>2</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </br>
+					
+                </div>
+
+                <div style="margin-bottom: 0.7em;" class="col-md-12 text-center">
+                    *corresponding author
+                </div>
+
+            </div>
+        </div>
+
+        <div style="margin-bottom: 0.7em;" class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://ieeexplore.ieee.org/document/9464668">
+                            <image src="img/paper.png" height="50px"><br>
+                                <h5><strong>Paper</strong></h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <image src="img/github_pad.png" height="50px"><br>
+                                <h5><strong>Code (coming)</strong></h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./img/supp.pdf">
+                            <image src="img/paperclip.png" height="50px"><br>
+                                <h5><strong>data (coming)</strong></h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="img/pipeline.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    In film making, shot has a profound influence on how the movie content is delivered and how the audiences are echoed, where different emotions and contents can be delivered through well-designed camera movements or shot editing. Therefore, in pursuit of high-level understanding of long videos,accurate shot detection from untrimmed videos should be considered as the first and the most fundamental step.Existing approaches address this problem based on the visual differences and content transitions between consecutive frames, while ignoring intrinsic shot attributes, viz, camera movements, scales, and viewing angles, which essentially reveal how each shot is created.In this work, we propose a new learning framework (SCTSNet) for shot boundary detection by jointly recognizing the attributes and composition of shots in videos. To facilitate the analysis of shots and the evaluation of shot detection models, we collect a large-scale shot boundary dataset MovieShots2, which contains 15K shots from 282 movie clips.It is richly annotated with the temporal boundary between consecutive shots and individual shot attributes, including camera movements, scales, and viewing angles, which are the three most distinct shot attributes.Our experiments show that the joint learning framework can significantly boost the boundary detection performance, surpassing the previous scores by a large margin.SCTSNet improves shot boundary detection AP from 0.65 to 0.77, pushing the performance to a new level.            
+                </p>
+            </div>
+        </div>
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@ARTICLE{9464668,
+	author={Jiang, Xuekun and Jin, Libiao and Rao, Anyi and Xu, Linning and Lin, Dahua},
+	journal={IEEE Transactions on Multimedia}, 
+	title={Jointly Learning the Attributes and Composition of Shots for Boundary Detection in Videos}, 
+	year={2021},
+	doi={10.1109/TMM.2021.3092143}}
+</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Cut Type Annotation
+                </h3>
+                <p class="text-justify">
+                
+                Coming soon <a href=""></a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+	<script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+	</script>
+
+
+
+
+</html>
